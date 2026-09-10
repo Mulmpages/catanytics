@@ -61,7 +61,9 @@ class Catan:
         return self.robber[turn][player][dice][resource]
 
     def get_production(self, player : str, turn : int, dice : int, resource : Resource) -> int:
-        return self.production[turn][player][dice][resource]
+        settlements = self.get_settlements(player, turn, dice, resource)
+        robber = self.get_robber(player, turn, dice, resource)
+        return settlements - robber
 
     # Change Game Information
     def set_dice(self, dice : int) -> None:
@@ -72,8 +74,11 @@ class Catan:
             for resource in resources[dice]:
                 self.settlements[self.turn][player][dice][resource] += resources[dice][resource]
 
-    def set_robber(self, robber : dict[str, Data_Player]) -> None:
-        self.robber[self.turn] = robber
+    def remove_robber(self) -> None:
+        self.robber[self.turn] = self.empty_data_player()
+
+    def set_robber(self, player : str, resources : Data_Player) -> None:
+        self.robber[self.turn][player] = resources
 
     # Turn -1: Player Selection
     def add_player(self, player : str) -> None:
@@ -85,9 +90,8 @@ class Catan:
     # Transition to Turn 0: No Dice Throw; Initial Settlement Placement
     def start(self) -> None:
         self.dice.append(None)
-        data_player_empty = {p: Data_Player() for p in self.players}
-        self.settlements.append(data_player_empty)
-        self.robber.append(data_player_empty)
+        self.settlements.append(self.empty_data_player())
+        self.robber.append(self.empty_data_player())
         self.turn = 0
 
     # Transition to Turn 1+: Dice Throw; Resource Distribution
@@ -102,6 +106,9 @@ class Catan:
         self.winner = winner
 
     # Utility
+    def empty_data_player(self) -> dict[str, Data_Player]:
+        return {p: Data_Player() for p in self.players}
+
     def save(self, path : str) -> None:
         with open(path, "w") as file:
             file.write(repr(self))

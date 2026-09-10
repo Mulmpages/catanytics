@@ -1,0 +1,23 @@
+#history {
+    height: 1fr;
+}
+
+#input {
+    dock: bottom;
+    height: 4;
+}
+
+#sidebar {
+    dock: right;
+    width: 30;
+}
+
+#analysis {
+    dock: top;
+    height: 10;
+}
+
+#hints {
+    dock: bottom;
+    height: 10;
+}
