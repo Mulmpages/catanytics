@@ -20,3 +20,4 @@ class Analysis:
             robber_total += self.catan.get_robber(player, x, dice, resource)
     
         return robber_total
+ except
