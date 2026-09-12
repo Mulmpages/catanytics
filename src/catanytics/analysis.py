@@ -12,3 +12,11 @@ class Analysis:
             expProd += self.catan.get_settlements(player, x, dice, resource)
 
         return expProd
+
+    def robber_C(self, player, dice, resource):
+        turn = self.catan.turn
+        robber_total = 0
+        for x in range(1, turn + 1):
+            robber_total += self.catan.get_robber(player, x, dice, resource)
+    
+        return robber_total
