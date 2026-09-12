@@ -1,0 +1,32 @@
+{
+  "turn": 1,
+  "players": [
+    "Milan",
+    "Neli"
+  ],
+  "winner": null,
+  "dice": [
+    null,
+    5
+  ],
+  "settlements": [
+    {
+      "Milan": "W2 W5 L12",
+      "Neli": ""
+    },
+    {
+      "Milan": "W2 W5 L12",
+      "Neli": ""
+    }
+  ],
+  "robber": [
+    {
+      "Milan": "",
+      "Neli": ""
+    },
+    {
+      "Milan": "",
+      "Neli": ""
+    }
+  ]
+}

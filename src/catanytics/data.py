@@ -8,10 +8,22 @@ class Resource(Enum):
     BRICK  = auto()
     ORE    = auto()
 
+    def __repr__(self) -> str:
+        # Example Output: 'W'
+        match self:
+            case Resource.WOOL:     return "W"
+            case Resource.GRAIN:    return "G"
+            case Resource.LUMBER:   return "L"
+            case Resource.BRICK:    return "B"
+            case Resource.ORE:      return "O"
+
+    __str__ = __repr__
+
     @staticmethod
-    def from_token(token : str) -> Resource:
-        # Example tokens: 'w', 'W'
-        match token.upper():
+    def read(string : str) -> Resource:
+        # Example Input: 'W'
+        string = string.strip()
+        match string.upper():
             case "W": return Resource.WOOL
             case "G": return Resource.GRAIN
             case "L": return Resource.LUMBER
@@ -51,15 +63,26 @@ class Data_Resource(dict):
             result[key] = self[key] - other[key]
         return result
 
+    def __repr__(self) -> str:
+        # Example Output: 'W W L'
+        string = ""
+        for (k, num) in self.items():
+            for i in range(num):
+                string += f"{k} "
+        return string.strip()
+
     @staticmethod
-    def from_token(token : str) -> Data_Resource:
-        # Example tokens: 'w', 'W'
-        resource = Resource.from_token(token)
-        if resource is None:
-            return None
-        data_resource = Data_Resource()
-        data_resource[resource] = 1
-        return data_resource
+    def read(string : str) -> Data_Resource:
+        # Example Input: 'w W L'
+        string = string.strip()
+        if string is None or string == "":
+            return Data_Resource()
+        obj = Data_Resource()
+        tokens = string.split(" ")
+        for t in tokens:
+            resource = Resource.read(t)
+            obj[resource] += 1
+        return obj
 
 
 class Data_Player(dict):
@@ -93,15 +116,25 @@ class Data_Player(dict):
             result[key] = self[key] - other[key]
         return result
 
+    def __repr__(self):
+        # Example Output: 'W2 W5 L12'
+        string = ""
+        for dice in Data_Player.KEYS:
+            for resource in Data_Resource.KEYS:
+                if self[dice][resource] != 0:
+                    string += f"{resource}{dice} "
+        return string.strip()
+
     @staticmethod
-    def from_token(token : str) -> Data_Resource:
-        # Example tokens: 'w3', 'W12'
-        resource = Resource.from_token(token[0])
-        if resource is None:
-            return None
-        dice = int(token[1:])
-        if (dice not in Data_Resource.KEYS):
-            return None
-        data_player = Data_Player()
-        data_player[dice][resource] = 1
-        return data_player
+    def read(string : str) -> Data_Player:
+        # Example Input: 'W2 W5 L12'
+        string = string.strip()
+        if string is None or string == "":
+            return Data_Player()
+        tokens = string.split(" ")
+        obj = Data_Player()
+        for t in tokens:
+            resource = Data_Resource.read(t[0])
+            dice = int(t[1:])
+            obj[dice] += resource
+        return obj
