@@ -1,32 +1,69 @@
 {
-  "turn": 1,
+  "lang": "de",
+  "turn": 5,
   "players": [
-    "Milan",
-    "Neli"
+    "A",
+    "B"
   ],
-  "winner": null,
+  "winner": "A",
   "dice": [
     null,
+    5,
+    5,
+    8,
+    5,
     5
   ],
   "settlements": [
     {
-      "Milan": "W2 W5 L12",
-      "Neli": ""
+      "A": "2SSH 5H 12L",
+      "B": "8SWE"
     },
     {
-      "Milan": "W2 W5 L12",
-      "Neli": ""
+      "A": "2SSH 5H 12L",
+      "B": "8SWE"
+    },
+    {
+      "A": "2SSH 5H 12L",
+      "B": "8SWE"
+    },
+    {
+      "A": "2SSH 5H 12L",
+      "B": "8SWE"
+    },
+    {
+      "A": "2SSH 5H 12L",
+      "B": "8SWE"
+    },
+    {
+      "A": "2SSH 5H 12L",
+      "B": "8SWE"
     }
   ],
   "robber": [
     {
-      "Milan": "",
-      "Neli": ""
+      "A": "5H",
+      "B": ""
     },
     {
-      "Milan": "",
-      "Neli": ""
+      "A": "5H",
+      "B": ""
+    },
+    {
+      "A": "5H",
+      "B": ""
+    },
+    {
+      "A": "",
+      "B": ""
+    },
+    {
+      "A": "",
+      "B": ""
+    },
+    {
+      "A": "",
+      "B": ""
     }
   ]
 }

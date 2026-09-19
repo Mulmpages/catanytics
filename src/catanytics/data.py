@@ -1,140 +1,188 @@
 from enum import Enum, auto
+from typing import ClassVar
+
+from catanytics import language
 
 
 class Resource(Enum):
-    WOOL   = auto()
-    GRAIN  = auto()
+    WOOL = auto()
+    GRAIN = auto()
     LUMBER = auto()
-    BRICK  = auto()
-    ORE    = auto()
+    BRICK = auto()
+    ORE = auto()
+
+    def long_name(self) -> str:
+        # Example Output: 'Wood'
+        if language.get() == "en":
+            match self:
+                case Resource.WOOL:
+                    return "Wool"
+                case Resource.GRAIN:
+                    return "Grain"
+                case Resource.LUMBER:
+                    return "Lumber"
+                case Resource.BRICK:
+                    return "Brick"
+                case Resource.ORE:
+                    return "Ore"
+        # Example Output: 'Holz'
+        if language.get() == "de":
+            match self:
+                case Resource.WOOL:
+                    return "Schaf"
+                case Resource.GRAIN:
+                    return "Weizen"
+                case Resource.LUMBER:
+                    return "Holz"
+                case Resource.BRICK:
+                    return "Lehm"
+                case Resource.ORE:
+                    return "Erz"
 
     def __repr__(self) -> str:
         # Example Output: 'W'
-        match self:
-            case Resource.WOOL:     return "W"
-            case Resource.GRAIN:    return "G"
-            case Resource.LUMBER:   return "L"
-            case Resource.BRICK:    return "B"
-            case Resource.ORE:      return "O"
+        # Example Output: 'H'
+        return self.long_name()[0]
 
     __str__ = __repr__
 
     @staticmethod
-    def read(string : str) -> Resource:
+    def read(string: str) -> Resource:
         # Example Input: 'W'
         string = string.strip()
-        match string.upper():
-            case "W": return Resource.WOOL
-            case "G": return Resource.GRAIN
-            case "L": return Resource.LUMBER
-            case "B": return Resource.BRICK
-            case "O": return Resource.ORE
-            case _: return None
+        if language.get() == "en":
+            match string.upper():
+                case "W":
+                    return Resource.WOOL
+                case "G":
+                    return Resource.GRAIN
+                case "L":
+                    return Resource.LUMBER
+                case "B":
+                    return Resource.BRICK
+                case "O":
+                    return Resource.ORE
+        # Example Input: 'H'
+        if language.get() == "de":
+            match string.upper():
+                case "S":
+                    return Resource.WOOL
+                case "W":
+                    return Resource.GRAIN
+                case "H":
+                    return Resource.LUMBER
+                case "L":
+                    return Resource.BRICK
+                case "E":
+                    return Resource.ORE
 
 
-class Data_Resource(dict):
-    KEYS = Resource
+class Resources(dict):
+    KEYS: ClassVar = Resource
 
     def __init__(self):
         super().__init__()
-        for key in Data_Resource.KEYS:
+        for key in Resources.KEYS:
             self[key] = 0
 
     def __eq__(self, other):
-        for key in Data_Resource.KEYS:
+        for key in Resources.KEYS:
             if self[key] != other[key]:
                 return False
         return True
 
-    def __int__(self):
+    def __int__(self) -> int:
         return sum(self.values())
 
     def __add__(self, other):
-        result = Data_Resource()
-        for key in Data_Resource.KEYS:
+        result = Resources()
+        for key in Resources.KEYS:
             result[key] = self[key] + other[key]
         return result
-    
+
     __radd__ = __add__
 
     def __sub__(self, other):
-        result = Data_Resource()
-        for key in Data_Resource.KEYS:
+        result = Resources()
+        for key in Resources.KEYS:
             result[key] = self[key] - other[key]
         return result
 
     def __repr__(self) -> str:
-        # Example Output: 'W W L'
+        # Example Output: 'WWL'
         string = ""
-        for (k, num) in self.items():
-            for i in range(num):
-                string += f"{k} "
-        return string.strip()
+        for k, num in self.items():
+            for _ in range(num):
+                string += f"{k}"
+        return string
 
     @staticmethod
-    def read(string : str) -> Data_Resource:
-        # Example Input: 'w W L'
-        string = string.strip()
+    def read(string: str) -> Resources:
+        # Example Input: 'WWL'
         if string is None or string == "":
-            return Data_Resource()
-        obj = Data_Resource()
-        tokens = string.split(" ")
-        for t in tokens:
-            resource = Resource.read(t)
+            return Resources()
+        string = string.strip()
+        obj = Resources()
+        for token in string:
+            resource = Resource.read(token)
             obj[resource] += 1
         return obj
 
 
-class Data_Player(dict):
-    KEYS = range(2, 13)
+class Player(dict):
+    KEYS: ClassVar = range(2, 13)
 
     def __init__(self):
         super().__init__()
-        for key in Data_Player.KEYS:
-            self[key] = Data_Resource()
+        for key in Player.KEYS:
+            self[key] = Resources()
 
     def __eq__(self, other):
-        for key in Data_Player.KEYS:
+        for key in Player.KEYS:
             if self[key] != other[key]:
                 return False
         return True
 
-    def __abs__(self):
-        return sum(int(self.values()))
+    def __int__(self) -> int:
+        return sum([int(d) for d in self.values()])
 
     def __add__(self, other):
-        result = Data_Player()
-        for key in Data_Player.KEYS:
+        result = Player()
+        for key in Player.KEYS:
             result[key] = self[key] + other[key]
         return result
-    
+
     __radd__ = __add__
 
     def __sub__(self, other):
-        result = Data_Player()
-        for key in Data_Player.KEYS:
+        result = Player()
+        for key in Player.KEYS:
             result[key] = self[key] - other[key]
         return result
 
     def __repr__(self):
-        # Example Output: 'W2 W5 L12'
+        # Example Output: '2WWL 5L 12B'
         string = ""
-        for dice in Data_Player.KEYS:
-            for resource in Data_Resource.KEYS:
-                if self[dice][resource] != 0:
-                    string += f"{resource}{dice} "
+        for dice in Player.KEYS:
+            resources = self[dice]
+            if int(resources) != 0:
+                string += f"{dice}{resources} "
         return string.strip()
 
     @staticmethod
-    def read(string : str) -> Data_Player:
-        # Example Input: 'W2 W5 L12'
-        string = string.strip()
+    def read(string: str) -> Player:
+        # Example Input: '2WWL 5L 12B'
         if string is None or string == "":
-            return Data_Player()
+            return Player()
+        string = string.strip()
         tokens = string.split(" ")
-        obj = Data_Player()
+        obj = Player()
         for t in tokens:
-            resource = Data_Resource.read(t[0])
-            dice = int(t[1:])
-            obj[dice] += resource
+            dice, resources = None, None
+            for k in reversed(Player.KEYS):
+                if str(k) in t:
+                    dice = k
+                    resources = Resources.read(t.removeprefix(str(k)))
+                    break
+            obj[dice] += resources
         return obj
