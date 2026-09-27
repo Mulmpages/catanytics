@@ -1,0 +1,599 @@
+{
+  "lang": "de",
+  "turn": 52,
+  "players": [
+    "Matthias",
+    "Milan",
+    "Nele"
+  ],
+  "winner": "Matthias",
+  "dice": [
+    null,
+    4,
+    5,
+    10,
+    7,
+    8,
+    4,
+    6,
+    6,
+    7,
+    9,
+    6,
+    7,
+    8,
+    7,
+    2,
+    9,
+    11,
+    3,
+    8,
+    10,
+    7,
+    11,
+    2,
+    8,
+    10,
+    8,
+    8,
+    5,
+    3,
+    3,
+    7,
+    5,
+    9,
+    4,
+    6,
+    8,
+    6,
+    11,
+    9,
+    7,
+    5,
+    4,
+    8,
+    5,
+    6,
+    4,
+    4,
+    6,
+    10,
+    9,
+    9,
+    10
+  ],
+  "settlements": [
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4W 6L 8E 9SH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4L 5H 6E 8W 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WL 5H 6E 8WW 10W",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSH 11E",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "4WW 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3S 5H 6LE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8E 9SSSHH 11SE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3S 4WWWL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "4WLL 5H 6E 8WWW 10WW",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "2L 4WLL 5H 6E 8WWWW 10WW 12S",
+      "Nele": "3SH 5H 6LLE 10W"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "2L 4WLL 5H 6E 8WWWW 10WW 12S",
+      "Nele": "3SH 5H 6LLE 9H 10WW"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "2L 4WLL 5H 6E 8WWWW 10WW 12S",
+      "Nele": "3SH 5H 6LLE 9H 10WW"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "2L 4WLL 5H 6E 8WWWW 10WW 12S",
+      "Nele": "3SH 5H 6LLE 9H 10WW"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "2L 4WLL 5H 6E 8WWWW 10WW 12S",
+      "Nele": "3SH 5H 6LLE 9H 10WW"
+    },
+    {
+      "Matthias": "3SS 4WWWWLL 6LL 8EE 9SSSHH 11SSE",
+      "Milan": "2L 4WLL 5H 6E 8WWWW 10WW 12S",
+      "Nele": "3SH 5H 6LLE 9H 10WW"
+    }
+  ],
+  "robber": [
+    {
+      "Matthias": "",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "9SS",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "9SS",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "9SS",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "4SS",
+      "Milan": "4W",
+      "Nele": ""
+    },
+    {
+      "Matthias": "4SS",
+      "Milan": "4W",
+      "Nele": ""
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "6LL",
+      "Milan": "",
+      "Nele": "6L"
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "6E",
+      "Nele": "6E"
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "8EE",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "8EE",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "",
+      "Milan": "8WWWW",
+      "Nele": ""
+    },
+    {
+      "Matthias": "8EE",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "8EE",
+      "Milan": "",
+      "Nele": ""
+    },
+    {
+      "Matthias": "8EE",
+      "Milan": "",
+      "Nele": ""
+    }
+  ]
+}

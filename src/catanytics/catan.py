@@ -1,4 +1,5 @@
 import json
+from copy import deepcopy
 from enum import Enum, auto
 
 from catanytics import data, language
@@ -186,8 +187,10 @@ class Catan:
     def next_turn(self) -> None:
         self.check("Game is not SETUP/ACTIVE", State.SETUP, State.ACTIVE)
         self.dice.append(None)
-        self.settlements.append(self.settlements[self.turn])
-        self.robber.append(self.robber[self.turn])
+        settlements_copy = deepcopy(self.settlements[self.turn])
+        self.settlements.append(settlements_copy)
+        robber_copy = deepcopy(self.robber[self.turn])
+        self.robber.append(robber_copy)
         self.turn += 1
 
     # Transition to Finished: Winner is known, Game ends
