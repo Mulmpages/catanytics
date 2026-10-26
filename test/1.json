@@ -1,5 +1,5 @@
 {
-  "lang": "de",
+  "lang": "DE",
   "turn": 52,
   "players": [
     "Matthias",
@@ -8,7 +8,6 @@
   ],
   "winner": "Matthias",
   "dice": [
-    null,
     4,
     5,
     10,
@@ -60,7 +59,8 @@
     10,
     9,
     9,
-    10
+    10,
+    null
   ],
   "settlements": [
     {

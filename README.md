@@ -4,7 +4,7 @@
 - Analyse the game
 - Export and Import the game
 
-Currently, only the core class `Catan` is available.
+Currently, the core `catan.py` and the tui `tui.py` are available.
 
 # Installation
 

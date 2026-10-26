@@ -1,5 +1,6 @@
 from catanytics.catan import Catan
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+
 
 class Analysis:
     def __init__(self, catan: Catan):
@@ -15,7 +16,7 @@ class Analysis:
         else:
             prob = (13 - dice) / 36
         return prob
-    
+
     def E(self, func, player, turn, resource):
         exp = 0
         for dice in range(2, 13):
@@ -40,7 +41,7 @@ class Analysis:
 
     def settlements_C(self, player, turn, resource):
         return self.C(self.catan.get_settlements, player, turn, resource)
-        
+
     def robber_C(self, player, turn, resource):
         return self.C(self.catan.get_robber, player, turn, resource)
 
@@ -73,7 +74,7 @@ class Analysis:
 
         return data
 
-    def plot_C_vs_EC(self, objective : str, turn):
+    def plot_C_vs_EC(self, objective: str, turn):
         # objective can be "settlements", "robber" or "production"
         func_C = None
         func_EC = None
@@ -89,30 +90,44 @@ class Analysis:
                 func_EC = self.production_EC
 
         dataset_C = {}
-        for player in self.catan.players:
+        for player in self.catan._players:
             C_data = self.get_data_plot(func_C, player, turn)
             dataset_C[player] = C_data
 
         dataset_EC = {}
-        for player in self.catan.players:
+        for player in self.catan._players:
             EC_data = self.get_data_plot(func_EC, player, turn)
             dataset_EC[player] = EC_data
 
         turns = list(range(1, turn + 1))
 
-        colors = plt.rcParams['axes.prop_cycle'].by_key()['color']
+        colors = plt.rcParams["axes.prop_cycle"].by_key()["color"]
 
         fig, ax = plt.subplots()
 
         for i, y in enumerate(dataset_C):
             color_player = colors[i % len(colors)]
             x = turns
-            ax.plot(x, y, marker="o", linestyle="-", color=color_player, label=f"{i} cumulative")
+            ax.plot(
+                x,
+                y,
+                marker="o",
+                linestyle="-",
+                color=color_player,
+                label=f"{i} cumulative",
+            )
 
         for i, y in enumerate(dataset_EC):
             color_player = colors[i % len(colors)]
             x = turns
-            ax.plot(x, y, marker="o", linestyle="--", color=color_player, label=f"{i} expected cumulative")
+            ax.plot(
+                x,
+                y,
+                marker="o",
+                linestyle="--",
+                color=color_player,
+                label=f"{i} expected cumulative",
+            )
 
         ax.legend()
         plt.show()
